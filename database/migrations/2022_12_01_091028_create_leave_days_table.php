@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('leave_days', function (Blueprint $table) {
             $table->id();
+            $table->integer('leave_type');
+            $table->integer('entitled_days');
             $table->timestamps();
         });
     }

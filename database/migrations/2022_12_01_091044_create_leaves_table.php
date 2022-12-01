@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('leaves', function (Blueprint $table) {
             $table->id();
+            $table->integer('leave_type');
+            $table->integer('user_id');
+            $table->integer('leave_status');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->string('start_date_time')->nullable();
+            $table->string('end_date_time')->nullable();
+            $table->string('days')->nullable();
+            $table->text('reason');
             $table->timestamps();
         });
     }

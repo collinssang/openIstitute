@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreLeaveDaysRequest;
 use App\Http\Requests\UpdateLeaveDaysRequest;
 use App\Models\LeaveDays;
+use Illuminate\Http\Response;
 
 class LeaveDaysController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -21,7 +22,7 @@ class LeaveDaysController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -32,7 +33,7 @@ class LeaveDaysController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreLeaveDaysRequest  $request
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function store(StoreLeaveDaysRequest $request)
     {
@@ -42,8 +43,8 @@ class LeaveDaysController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\LeaveDays  $leaveDays
-     * @return \Illuminate\Http\Response
+     * @param LeaveDays $leaveDays
+     * @return Response
      */
     public function show(LeaveDays $leaveDays)
     {
@@ -53,8 +54,8 @@ class LeaveDaysController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\LeaveDays  $leaveDays
-     * @return \Illuminate\Http\Response
+     * @param LeaveDays $leaveDays
+     * @return Response
      */
     public function edit(LeaveDays $leaveDays)
     {
@@ -65,8 +66,8 @@ class LeaveDaysController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdateLeaveDaysRequest  $request
-     * @param  \App\Models\LeaveDays  $leaveDays
-     * @return \Illuminate\Http\Response
+     * @param LeaveDays $leaveDays
+     * @return Response
      */
     public function update(UpdateLeaveDaysRequest $request, LeaveDays $leaveDays)
     {
@@ -76,10 +77,10 @@ class LeaveDaysController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\LeaveDays  $leaveDays
-     * @return \Illuminate\Http\Response
+     * @param LeaveDays $leaveDays
+     * @return Response
      */
-    public function destroy(LeaveDays $leaveDays)
+    public function destroy(LeaveDays $leaveDays): Response
     {
         //
     }
