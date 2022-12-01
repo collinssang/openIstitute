@@ -65,7 +65,7 @@ class LeaveDaysController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateLeaveDaysRequest  $request
+     * @param UpdateLeaveDaysRequest $request
      * @param LeaveDays $leaveDays
      * @return Response
      */
