@@ -1,0 +1,197 @@
+
+.login-page {
+    /*background-image: url("icons/Background.jpg");*/
+    background-repeat: no-repeat;
+    background-color: #2a99d4;
+    background-size: cover;
+    background-position: 10% 50%;
+}
+
+.top-bar{
+    top:0;
+    height:150px;
+    z-index: 1;
+    /*position: fixed;*/
+    background-image: url("icons/Bar_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-box {
+    /*width: 15%;*/
+    margin-top: 18%;
+    margin-right: 20% ;
+    /*float: right;*/
+    /*padding-right: 22em;*/
+    /*margin-left: 50px;*/
+}
+
+
+.eklogin-logo {
+    /*width: 20%;*/
+    margin: 7% auto;
+    /*float: left;*/
+    /*padding-left: 22em;*/
+    /*margin-left: 50px;*/
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+}
+
+.eklogin-logo>img {
+    width: 100%;
+}
+
+.login-logo a {
+    color: #fff;
+}
+.login-box-body {
+    background: transparent;
+    padding: 0px;
+    border-top: 0;
+    color: #ffffff;
+
+}
+.login-box-body .logo{
+    background-image: url("icons/EKraal-logo.png");
+}
+
+.login-form .icons{
+    background-color: #fe2d02;
+    z-index: -1;
+}
+.login-form .icons-i{
+    z-index: 1;
+}
+
+.forget {
+    color: #ffffff;
+    text-decoration: none;
+    text-underline: none;
+}
+.forget:hover {
+    color: #252e54;
+    text-decoration: none;
+    text-underline: none;
+}
+.login-btn{
+    background-color:#303030;
+    border-radius: 1.5em;
+    color: #ffffff;
+    font-size: 2.0em;
+}
+.login-btn:hover{
+    color: #ffffff;
+}
+.btn{
+    padding: 0px;
+}
+
+.login-box-body .form-control-feedback, .register-box-body .form-control-feedback {
+    color: #fff;
+}
+
+.form-control-feedback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    pointer-events: none;
+    background-color: #252e54;
+}
+
+.a-form-control {
+    padding: 6px 35px;
+    color: #ffffff;
+    /*background-color: b;*/
+}
+
+
+.form-group>.input-group-prepend>.input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    /* background-color: #fff; */
+    background-image: none;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    /* transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; */
+}
+
+/*.l-icon-user{*/
+    /*width:10px;*/
+    /*display:block;*/
+    /*height:20px;*/
+    /*!* background:red; *!*/
+    /*color:white;*/
+    /*text-decoration:none;*/
+    /*padding-left:20px;*/
+/*}*/
+
+.l-icon-user:before{
+    content: '';
+    background:url('icons/profile.png');
+    text-align: center;
+    background-size:cover;
+    position:absolute;
+    width:20px;
+    height:20px;
+    color:#fff;
+    margin-left:5px;
+}
+
+
+
+
+
+.a-icheckbox, .iradio_square-blue {
+    display: inline-block;
+
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+    /*background-color: #ffffff ;*/
+    border: none;
+    cursor: pointer;
+}
+
+.a-icheckbox_square-blue.checked {
+    background-color: #303030;
+    color: #ffffff;
+}
+
+.a-icheckbox_square-blue.checked {
+    background-color: gray;
+}
+
+
+.btn-darkblue{
+    background-color: #252e54 ;
+    color: #fff;
+}
+
+.btn-darkblue:hover{
+    background-color: #2a99d4 ;
+    color: #fff;
+}

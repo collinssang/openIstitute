@@ -1,0 +1,63 @@
+.login-page {
+    background-image: url("icons/Background_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 10% 50%;
+}
+
+.top-bar{
+    top:0;
+    height:150px;
+    z-index: 1;
+    /*position: fixed;*/
+    background-image: url("icons/Bar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-box {
+    width: 700px;
+    /*margin: 2% auto;*/
+    float: left;
+    padding-left: 22em;
+    /*margin-left: 50px;*/
+}
+
+.login-box-body {
+    background: transparent;
+    padding: 0px;
+    border-top: 0;
+    color: #303030;
+
+}
+.locked_pass{
+    background-image: url("icons/change_password_icon.svg") ;
+    background-repeat: no-repeat;
+    background-size: 350px 100px;
+    background-position: 10% -5%;
+    float: left;
+    height: 100pt;
+}
+.inbox{
+    border-left-style: solid;
+    height: 80pt;
+}
+.resetpass_header{
+    margin-top: 3%;
+}
+.resetContent{
+    margin-left: 15%;
+    width: 70%;
+}
+.form-body{
+    margin-left: 24%;
+}
+.form input{
+    background-color: lightgrey;
+    width: 70%;
+}
+.form button{
+    background-color: black;
+    width: 150px;
+    border-radius: 50px;
+    color: white;
+}

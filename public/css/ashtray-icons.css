@@ -1,0 +1,338 @@
+.a-fa:before{
+    content: '';
+    background-size:cover;
+    position:absolute;
+    width:20px;
+    height:20px;
+    background-color: #303030;
+}
+
+.sidebar-menu a > i{
+    padding-right:30px;
+}
+
+.icon-dash:before{
+    -webkit-mask: url('icons/Dashboard.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-dash:before{
+    background-color: #2a99d4;
+}
+
+.icon-scrum:before{
+    -webkit-mask: url('icons/Scrum.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-scrum:before{
+    background-color: #2a99d4;
+}
+
+
+.icon-admin:before{
+    -webkit-mask: url('icons/Admin.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-admin:before{
+    background-color: #2a99d4;
+}
+.icon-equipment:before{
+    -webkit-mask: url('icons/Equipment.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-equipment:before{
+    background-color: #2a99d4;
+}
+
+.icon-department:before{
+    -webkit-mask: url('icons/Departments.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-department:before{
+    background-color: #2a99d4;
+}
+
+.icon-leave:before{
+    -webkit-mask: url('icons/Leave.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-leave:before{
+    background-color: #2a99d4;
+}
+
+.icon-project:before{
+    -webkit-mask: url('icons/Projects.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-project:before{
+    background-color: #2a99d4;
+}
+
+.icon-feature:before{
+    -webkit-mask: url('icons/Features.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-feature:before{
+    background-color: #2a99d4;
+}
+
+.icon-priority:before{
+    -webkit-mask: url('icons/Priority.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-priority:before{
+    background-color: #2a99d4;
+}
+
+.icon-issue:before{
+    -webkit-mask: url('icons/Issues.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-issue:before{
+    background-color: #2a99d4;
+}
+
+.icon-software:before{
+    -webkit-mask: url('icons/Software_version.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-software:before{
+    background-color: #2a99d4;
+}
+
+.icon-task_history:before{
+    -webkit-mask: url('icons/Task_history.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-task_history:before{
+    background-color: #2a99d4;
+}
+
+.icon-report:before{
+    -webkit-mask: url('icons/reports.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-report:before{
+    background-color: #2a99d4;
+}
+
+.icon-roles:before{
+    -webkit-mask: url('icons/Roles.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-roles:before{
+    background-color: #2a99d4;
+}
+
+.icon-status:before{
+    -webkit-mask: url('icons/Status.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-status:before{
+    background-color: #2a99d4;
+}
+
+.icon-bug:before{
+    -webkit-mask: url('icons/Bug.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-bug:before{
+    background-color: #2a99d4;
+}
+
+.icon-teams:before{
+    -webkit-mask: url('icons/Teams.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-teams:before{
+    background-color: #2a99d4;
+}
+
+.icon-users:before{
+    -webkit-mask: url('icons/users.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+li.active .icon-users:before{
+    background-color: #2a99d4;
+}
+
+li.menu-open .a-fa:before{
+    background-color: #2a99d4;
+}
+
+
+
+
+.icon-settings:before{
+    content: '';
+    background:url('icons/settings.png');
+    background-size:cover;
+    position:absolute;
+    width:20px;
+    height:20px;
+    margin-left:-20px;
+    margin-bottom: 20px;
+}
+
+
+.icon-task:before{
+    background-image: url("icons/Task.png");
+    content: '';
+    background-size:cover;
+    position:absolute;
+    width:20px;
+    height:20px;
+
+}
+
+.icon-new-feature:before{
+    background-image: url("icons/New_feature.png");
+    content: '';
+    background-size:cover;
+    position:absolute;
+    width:20px;
+    height:20px;
+
+}
+
+.icon-improvement:before{
+    background-image: url("icons/Improvement.png");
+    content: '';
+    background-size:cover;
+    position:absolute;
+    width:20px;
+    height:20px;
+
+}
+
+.icon-bug:before{
+    background-image: url("icons/Bug.png");
+    content: '';
+    background-size:cover;
+    position:absolute;
+    width:20px;
+    height:20px;
+
+}
+
+.icon-epic:before{
+    background-image: url("icons/Epic.png");
+    content: '';
+    background-size:cover;
+    position:absolute;
+    width:20px;
+    height:20px;
+
+}
+
+
+
+.low-priority {
+    color: #fff;
+    background-color:#f39c12;
+    border-radius: 50%;
+}
+.medium-priority {
+    color: #fff;
+    background-color: #4dbd74;
+    border-radius: 50%;
+}
+.high-priority {
+    color: #fff;
+    background-color: #fe2d02;
+    border-radius: 50%;
+}
+
+.a-badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 50%;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+
+.a-icon:before{
+    content: '';
+    background-size:cover;
+    position:absolute;
+    width:20px;
+    height:20px;
+    background-color: #fff;
+    margin-left:0.1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: inherit;
+    margin-right: .5rem!important;
+}
+
+.a-add-user:before {
+    -webkit-mask: url('icons/add_user.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+.a-bell:before {
+    -webkit-mask: url('icons/notification.png') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+}
+
+.inline-icon:before{
+    content: '';
+    background-size:cover;
+    position:absolute;
+    width:15px;
+    height:15px;
+    background-color: #939393;
+    margin-left:-20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: inherit;
+    margin-right: .2rem!important;
+}
+
+.icon-chat:before{
+    -webkit-mask: url('icons/chat.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+
+}
+
+.icon-attach:before{
+    -webkit-mask: url('icons/attach.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+
+}
+
+.icon-mini-menu:before{
+    -webkit-mask: url('icons/menu 2.svg') no-repeat 100% 100%;
+    -webkit-mask-size: cover;
+    font-size: small;
+
+
+}
+
+.menu-open>ul.treeview-menu{
+    display: block;
+}
