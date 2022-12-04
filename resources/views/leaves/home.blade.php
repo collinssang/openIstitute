@@ -50,7 +50,7 @@
                 <!-- small box -->
                 <div class="small-box bg-green">
                     <div class="inner">
-                        <h3> {{count($leaves)}}</h3>
+                        <h3>{{count($leaves)}}</h3>
 
                         <p>&nbsp; Leave Requests</p>
                     </div>
@@ -99,8 +99,7 @@
                     @if($entitled_Days != null)
                     <?php
 
-                    $annual_available_days = $entitled_Days->Entitled_days - $days_sum['annual_days'];
-                    //                                    print_r($days_sum);
+                    $annual_available_days = $entitled_Days->entitled_days;
                     ?>
                     <p>&nbsp;{{$annual_available_days}} Available Annual Days</p>
                     @endif

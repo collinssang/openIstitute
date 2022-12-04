@@ -61,6 +61,160 @@ $task = [] ?>
 @if (!Auth::guest())
 <div class="wrapper">
     <!-- Main Header -->
+    <header class="a-main-header ">
+
+        <!-- Logo -->
+        <!-- Header Navbar -->
+        <nav class="a-navbar  navbar-static-top" role="navigation">
+
+            <!-- Navbar Right Menu -->
+
+            <div class="navbar-custom-menu">
+                <div class="row erp-logo">OpenInst</div>
+                <br>
+                <ul class="nav navbar-nav">
+                    <?php
+                    $modelname = \App\Models\Leave::class;
+                    $notificaitonCount = \App\Models\Notification::where('status', '0')
+                        ->where('recipient_id', Auth::id())
+                        ->count();
+                    $leaves_count = \App\Models\Notification::where('model_name', $modelname)
+                        ->where('recipient_id', Auth::id())
+                        ->where('status', '0')
+                        ->count();
+
+                    $adminLeaveApprove = App\Models\Leave::where('user_id', Auth::user()->id)->where('leave_status', 2)->orWhere('leave_status', 1)->count();
+
+                    $totalNotifications = '';
+
+                        $totalNotifications = $notificaitonCount;
+
+                    ?>
+                    <!-- Notifications: style can be found in dropdown.less -->
+                    <li class="dropdown notifications-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="label label-warning">
+                                {{$totalNotifications}}
+                            </span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have
+                                <label class="badge badge-label-success">
+                                    {{$totalNotifications}}
+                                </label> &nbsp;  notifications
+                            </li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    {{--                                        <li>--}}
+                                        {{--                                            @if(Auth::user()->hasRole('admin'))--}}
+                                        {{--                                                @if(Auth::user()->can('approve-leave'))--}}
+                                        {{--                                                    <a href="{{url('/leave_request')}}" class="dropdown-item d-block">--}}
+                                            {{--                                                        <div class="small mb-1"><i class="fa fa-users text-aqua"></i>--}}
+                                                {{--                                                            Leave Requests--}}
+                                                {{--                                                            <span class="float-right">--}}
+{{--                                                    <label class="label label-danger">--}}
+{{--                                                            <strong>--}}
+{{--                                                                {{$adminLeaveApprove}}--}}
+{{--                                                            </strong>--}}
+{{--                                                    </label>--}}
+{{--                                                        </span>--}}
+                                                {{--                                                        </div>--}}
+                                            {{--                                                        <span class="progress progress-xs">--}}
+{{--                                                <div class="progress-bar bg-info" role="progressbar" style="width: 0%"--}}
+                                                         {{--                                                     aria-valuenow="0"--}}
+                                                         {{--                                                     aria-valuemin="0" aria-valuemax="100">--}}
+
+{{--                                                </div>--}}
+{{--                                            </span>--}}
+                                            {{--                                                    </a>--}}
+                                        {{--                                                @endif--}}
+                                        {{--                                            @endif--}}
+                                        {{--                                        </li>--}}
+                                    {{--                                        <li>--}}
+                                        {{--                                            <a href="{{url('/leaves_notice')}}">--}}
+                                            {{--                                                <i class="fa fa-users text-aqua"></i>--}}
+                                            {{--                                                Leave Notification(s)--}}
+                                            {{--                                                <label class="label label-danger">--}}
+                                                {{--                                                    {{$leaves_count}}--}}
+                                                {{--                                                </label>--}}
+                                            {{--                                            </a>--}}
+                                        {{--                                        </li>--}}
+<!---->
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <!-- User Account Menu -->
+                    <li class="dropdown user user-menu">
+                        <!-- Menu Toggle Button -->
+                        <a href="#" class="dropdown-toggle profile-img" data-toggle="dropdown">
+                            <!-- The user image in the navbar-->
+                            @if(Auth::user()->profile_img_url)
+                            <img src="{{ Auth::user()->profile_img_url }}"
+                                 class="user-image" alt="User Image"/>
+                            @else
+
+                            <img src="{{url('/css/icons/profile.svg')}}"
+                                 class="user-image " alt="User Image"/>
+                            @endif
+
+                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                            <span class="hidden-xs">{{ Auth::user()->firstName }}</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- The user image in the menu -->
+                            <li class="user-header">
+                                @if(Auth::user()->profile_img_url)
+                                <img src="{{ Auth::user()->profile_img_url }}"
+                                     class="img-circle" alt="User Image"/>
+                                @else
+
+                                <img src="{{url('/css/icons/profile.svg')}}"
+                                     class="img-circle" alt="User Image"/>
+                                @endif
+
+                                <p>
+                                    {{ Auth::user()->firstName }}
+                                    <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small>
+                                </p>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="{{url('/profiles')}}" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
+                                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        Sign out
+                                    </a>
+                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST"
+                                          style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        @yield('content')
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="main-footer" style="max-height: 100px;text-align: center" ur="{{url('/getBirthdays')}}">
+        <strong>Copyright © {{date('Y')}} <a href="#">{{ config('app.name') }}</a>.</strong> All rights reserved.
+    </footer>
+
 </div>
 @else
 <header class="a-main-header">
@@ -146,66 +300,6 @@ $task = [] ?>
     $(".select2").select2({
         closeOnSelect: false
     });
-    $(document).ready(function () {
-        // $(document).bind("contextmenu",function(e){
-        //     return false;
-        // });
-
-        /**
-         * Disable right-click of mouse, F12 key, and save key combinations on page
-         * By Arthur Collins Sang
-         *
-         */
-
-        document.addEventListener("contextmenu", function (e) {
-            e.preventDefault();
-            // alert("Right Click is not allowed");
-        }, false);
-        document.addEventListener("keydown", function (e) {
-
-            // document.onkeydown = function(e) {
-            // "I" key
-            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
-                // alert("The combination of CTRL + shiftKey + I has been disabled");
-                disabledEvent(e);
-            }
-            // "J" key
-            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
-                // alert("The combination of CTRL + shiftKey +J has been disabled");
-                disabledEvent(e);
-            }
-            // "S" key + macOS
-            if (e.keyCode === 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-                // alert("The combination of CTRL + shiftKey + S has been disabled");
-                disabledEvent(e);
-            }
-            // "U" key
-            if (e.ctrlKey && e.keyCode === 85) {
-                // alert("The combination of CTRL + shiftKey + U has been disabled");
-                disabledEvent(e);
-            }
-            // "F12" key
-            if (e.keyCode === 123) {
-                // alert("The F12 key has been disabled");
-                disabledEvent(e);
-            }
-
-        }, false);
-
-        function disabledEvent(e) {
-            if (e.stopPropagation) {
-                e.stopPropagation();
-            } else if (window.event) {
-                window.event.cancelBubble = true;
-            }
-            e.preventDefault();
-            return false;
-
-        }
-    });
-
-
-
 </script>
 
 @include('layouts.modals')

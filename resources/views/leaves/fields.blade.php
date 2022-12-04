@@ -1,7 +1,11 @@
 <!-- Leave Type Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('leave_type', 'Leave Type:') !!}
-    {!! Form::select('leave_type', $leave_typeItems, null, ['class' => 'form-control']) !!}
+    <select name="leave_type" class = 'form-control'>
+        @foreach($leave_typeItems as $leave_typeItem)
+        <option value="{{$leave_typeItem->id}}" >{{$leave_typeItem->name}}</option>
+        @endforeach
+    </select>
 </div>
 <div class="form-group col-sm-6">
     {!! Form::label('leave duration', 'Enter Duration details for your leave below:') !!}
@@ -72,7 +76,11 @@
 <!-- Leave Status Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('leave_status', 'Leave Status:') !!}
-    {!! Form::select('leave_status', $leave_statusItems, null, ['class' => 'form-control']) !!}
+   <select name="leave_status"  class = 'form-control'>
+       @foreach($leave_statusItems as $leave_statusItem)
+       <option value="{{$leave_statusItem->id}}">{{$leave_statusItem->name}}</option>
+       @endforeach
+   </select>
 </div>
 
 <!-- Submit Field -->

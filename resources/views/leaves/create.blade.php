@@ -7,8 +7,6 @@
         </h1>
     </section>
     <div class="content">
-        @include('flash::message')
-        @include('adminlte-templates::common.errors')
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row">

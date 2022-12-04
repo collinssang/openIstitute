@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[App\Http\Controllers\LeaveController::class, 'index']);
 Route::resource('leaveStatuses', App\Http\Controllers\LeaveStatusController::class);
 
 Route::resource('leaveTypes', App\Http\Controllers\LeaveTypeController::class);
@@ -33,9 +32,6 @@ Route::post('/approve_leave/{id}', [App\Http\Controllers\LeaveController::class,
 
 Route::post('/reject_leave/{id}', [App\Http\Controllers\LeaveController::class, 'leaveApprovalReject']);
 
-
-
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\LeaveController::class, 'index'])->name('home');
